@@ -28,16 +28,18 @@ body {
 }
 
 .icon-wrapper {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    width: 48px;
+    height: 48px;
 }
 
 .tooltip {
   position: absolute;
-  bottom: -50%; /* Position above the icon */
+  bottom: -50%; /* Position under the icon */
   /*bottom: 120%; /* Position above the icon */
-  left: 30%;
+  left: 35%;
   transform: translateX(-50%) translateY(10px);
   background-color: #3B4252; /* Nord1 */
   color: #ECEFF4; /* Nord6 */
@@ -47,7 +49,7 @@ body {
   white-space: nowrap;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
@@ -56,18 +58,16 @@ body {
   transform: translateX(-50%) translateY(0);
 }
 
-
 a svg {
-    transition: transform 0.3s ease, fill 0.3s ease;
+    transition: transform 0.3s ease-in-out, fill 0.3s ease-in-out;
     width: 48px;
     height: 48px;
-    color: #D8DEE9; /* or set a specific color like var(--nord8) */
-    fill: currentColor;
+    fill: #4C566A; /* Nord4 - main icon color */
 }
 
 a svg:hover {
     transform: scale(1.1);
-    fill: #88C0D0; /* Nord8 - hover color */
+    fill: #A3BE8C; /* Nord8 - hover color */
 }
 
 
@@ -93,7 +93,7 @@ a {
 
 #loader {
     border: 8px solid #D8DEE9;
-    border-top: 8px solid #5E81AC;
+    border-top: 8px solid #A3BE8C;
     border-radius: 50%;
     width: 60px;
     height: 60px;
@@ -126,8 +126,11 @@ main {
 
 h1 {
     font-size: 120px;
+    display: inline-block;
     animation: float 6s ease-in-out infinite;
     margin-bottom: 5px; 
+    color: #ECEFF4; /* Nord6 - main text color */
+    transition: color 0.4s ease-in-out; /* smoother transition */
 }
 
 h1 strong {
@@ -137,6 +140,10 @@ h1 strong {
 h1 em {
     font-style: italic;
     font-weight: 50;
+}
+
+h1:hover {
+    color: #A3BE8C; /* Nord8 - hover color */
 }
 
 @keyframes float {

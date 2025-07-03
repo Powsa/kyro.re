@@ -34,7 +34,7 @@ function updateParticles() {
         p.life -= 1;
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(136, 192, 208, ${p.life / 100})`;
+        ctx.fillStyle = `rgba(163, 190, 140, ${p.life / 100})`;
         ctx.fill();
         if (p.life <= 0) {
             particles.splice(index, 1);
