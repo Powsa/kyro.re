@@ -43,6 +43,16 @@ function updateParticles() {
     requestAnimationFrame(updateParticles);
 }
 
+function toggleMenu() {
+    const hamburger = document.querySelector('.hamburger-btn');
+    const menu = document.querySelector('.side-menu');
+    const overlay = document.querySelector('.menu-overlay');
+            
+    hamburger.classList.toggle('active');
+    menu.classList.toggle('active');
+    overlay.classList.toggle('active');
+}
+
 window.addEventListener('mousemove', (e) => {
     for (let i = 0; i < 0.02; i++) {
         createParticle(e.clientX, e.clientY);
