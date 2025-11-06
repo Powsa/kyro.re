@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+    </div>
     <div class="overlay"></div>
 
     <!-- Hamburger Menu Button -->
@@ -130,20 +133,10 @@
     </main>
 
     <canvas id="particles"></canvas>
-
-    <script>
-        function toggleMenu() {
-            const hamburger = document.querySelector('.hamburger-btn');
-            const menu = document.querySelector('.side-menu');
-            const overlay = document.querySelector('.menu-overlay');
-            
-            hamburger.classList.toggle('active');
-            menu.classList.toggle('active');
-            overlay.classList.toggle('active');
-        }
-    </script>
+    <script src="assets/script.js"></script>
 </body>
 </html>
+
 
 
 
